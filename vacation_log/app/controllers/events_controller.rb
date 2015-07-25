@@ -40,6 +40,14 @@ class EventsController < ApplicationController
 		redirect_to events_path
 	end
 
+	def like
+		@event = Event.find(params[:id])
+
+		@event.likes += 1
+		@event.save
+		redirect_to events_path
+	end
+
 	private
 	def event_params 
 		event_params = params.require(:event).permit(:name, :date, :rating, :likes)

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root 'events#index'
 
+  get 'events/:id/like', to: 'places#like', as: :like
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

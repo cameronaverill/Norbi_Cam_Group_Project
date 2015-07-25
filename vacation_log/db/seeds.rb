@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Event.delete_all
+
+cape = Event.create name: 'Cape of Good Hope', date: "July 18, 2015", rating: 4, likes: 0
+surfing = Event.create name: "Surfing at Muizenberg", date: "July 25, 2015", rating: 4, likes: 0
