@@ -14,6 +14,7 @@ class EventsController < ApplicationController
 
 	def new
 		@event = Event.new
+		@contributions = @event.contributions
 	end
 
 	def edit
@@ -22,6 +23,7 @@ class EventsController < ApplicationController
 
 	def show
 		@event = Event.find(params[:id])
+		@contributions = @event.contributions
 	end
 
 	def update

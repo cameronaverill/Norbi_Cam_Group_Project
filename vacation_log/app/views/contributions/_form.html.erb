@@ -1,0 +1,12 @@
+<%= bootstrap_form_for([@event, @event.contributions.build]) do |f| %>
+<% if @event.errors.present? %>
+	<% @event.contributions.errors.full_messages.each do |msg| %>
+		<p> <%= msg %> </p>
+	<%end%>
+<%end%>
+
+  <%= f.text_field :contributor %>
+  <%= f.text_field :text %>
+  <%= f.file_field :avatar %>
+  <%= f.submit "Log In" %>
+<% end %>

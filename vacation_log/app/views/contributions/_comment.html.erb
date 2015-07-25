@@ -1,0 +1,6 @@
+
+<%@event.contributions.each do |contribution| %>
+<p> Name: <%=contribution.contributor%> <br>
+			<%=contribution.text%> 
+			<%=image_tag @contribution.avatar.url(:large) %></p>
+<%end%>
