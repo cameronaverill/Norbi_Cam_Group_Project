@@ -1,9 +1,14 @@
 <div class="container"> <div class="col-md-0.5"> </div> <div class="col-md-11.5"> <h1> <strong> <%=@event.name %> </strong> </h1> 
 <h1> <small> <%= @event.date %> </small> </h1> </div> </div>
 
-<%= render @event.contributions %>
-
-<%= render 'contributions/form' %>
 
 <hr>
 
+<%= render @event.contributions %>
+<%= render 'contributions/form' %>
+
+
+
+<%= link_to 'Back', events_path %>
+<td><%= link_to 'Delete', event_path(@event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<%= link_to 'Edit', edit_event_path%>
