@@ -14,6 +14,6 @@ class ContributionsController < ApplicationController
 
 	private
 	def contribution_params
-		params.require(:contribution).permit(:text, :contributor, :avatar)
+		params.require(:contribution).permit(:text, :contributor, :photo)
 	end
 end

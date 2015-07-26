@@ -2,7 +2,7 @@
 <%@event.contributions.each do |contribution| %>
 <p> Name: <%=contribution.contributor%> <br>
 			<%=contribution.text%> 
-			<%= image_tag contribution.avatar(:medium) %></p>
+			<%= image_tag contribution.photo(:medium) %></p>
 
 			 <%= link_to 'Delete Contribution', [contribution.event, contribution],
                method: :delete,
