@@ -1,10 +1,14 @@
 
 <%@event.contributions.each do |contribution| %>
-<p> Name: <%=contribution.contributor%> <br>
-			<%=contribution.text%> 
-			<%= image_tag contribution.photo(:medium) %></p>
+<p> 
+	<h3> <%=contribution.contributor%> </h3> <br>
+			<%= image_tag contribution.photo(:larger) %> </br>
+			<%=contribution.text%> </p>
 
 			 <%= link_to 'Delete Contribution', [contribution.event, contribution],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
+
+    <hr>
+
 <%end%>

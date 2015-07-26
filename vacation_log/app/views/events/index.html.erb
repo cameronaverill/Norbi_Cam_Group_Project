@@ -1,3 +1,5 @@
+<div class="text-center col-md-6 col-md-offset-3">
+<table class="table table-striped table-hover">
 <h1> Our Vacation Log </h1>
 
 <% @events.each do |event|%>
@@ -11,4 +13,6 @@
 
 
 <%end%>
+</table>
 <%= link_to 'New', new_event_path %>
+</div>
