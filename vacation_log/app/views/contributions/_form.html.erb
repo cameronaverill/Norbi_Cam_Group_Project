@@ -1,3 +1,4 @@
+
 <%= bootstrap_form_for([@event, @event.contributions.build], :multipart => true) do |f| %>
 <% if @event.errors.present? %>
 	<% @event.contributions.errors.full_messages.each do |msg| %>

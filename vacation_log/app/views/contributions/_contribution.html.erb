@@ -1,8 +1,8 @@
 
 <%@event.contributions.each do |contribution| %>
 <p> 
-	<h3> <%=contribution.contributor%> </h3> <br>
-			<%= image_tag contribution.photo(:larger) %> </br>
+	<h2> <%=contribution.contributor%> </h2> <br>
+			<%= image_tag contribution.photo(:larger) %> </br> </br>
 			<%=contribution.text%> </p>
 
 			 <%= link_to 'Delete Contribution', [contribution.event, contribution],
