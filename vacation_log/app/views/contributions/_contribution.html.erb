@@ -3,4 +3,8 @@
 <p> Name: <%=contribution.contributor%> <br>
 			<%=contribution.text%> 
 			<%= image_tag contribution.avatar(:medium) %></p>
+
+			 <%= link_to 'Delete Contribution', [contribution.event, contribution],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
 <%end%>

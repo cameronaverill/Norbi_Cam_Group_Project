@@ -7,7 +7,7 @@ class ContributionsController < ApplicationController
 
 	def destroy
 		@event = Event.find(params[:event_id])
-    	@contribution = @event.contributions.create(contribution_params)
+    	@contribution = @event.contributions.find(params[:id])
     	@contribution.destroy
     	redirect_to event_path(@event)
 	end
