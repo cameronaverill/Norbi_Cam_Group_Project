@@ -10,7 +10,7 @@
 
 
 
-<%= link_to 'Back', events_path %>
-<td><%= link_to 'Delete', event_path(@event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-<%= link_to 'Edit', edit_event_path%>
+<%= link_to 'Back to Events', events_path %> 
+<td><%= link_to 'Delete Event', event_path(@event), method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+<%= link_to 'Edit Event', edit_event_path%>
 </div>
