@@ -1,6 +1,4 @@
-
-<%@event.contributions.each do |contribution| %>
-<p> 
+<p>
 	<h2> <%=contribution.contributor%> </h2> <br>
 			<%= image_tag contribution.photo(:larger) %> </br> </br>
 			<%=contribution.text%> </p>
@@ -10,5 +8,3 @@
                data: { confirm: 'Are you sure?' } %>
 
     <hr>
-
-<%end%>
